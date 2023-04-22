@@ -239,10 +239,9 @@ body {
   .hero::after {
     height: 50%; /* atur tinggi agar sejajar dengan .content */
   }
-  /* .hero .content {
-    margin-top: 30rem;
-
-  } */
+  .hero .content {
+    margin-top: 10rem;
+  }
 }
 
 /* Mobile Phone  */
@@ -251,7 +250,7 @@ body {
     font-size: 52%;
   }
   .hero .content {
-    margin-top: 30rem;
+    margin-top: 20rem;
     /* z-index: 0; */
   }
 }
