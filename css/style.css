@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Explora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Explora&family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,700&display=swap");
+
+/* My FONTS */
+@font-face {
+  font-family: analogue;
+  src: url("../fonts/Analogue.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: analogue;
+  src: url("../fonts/MiConv.com__Analogue\ Thin.woff") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: analogue;
+  src: url("../fonts/MiConv.com__AnalogueRed-46LightOblique.woff") format("woff");
+  font-weight: 200;
+}
 /* MY CSS VARIABLE */
 :root {
   --explora: "Explora", cursive;
@@ -46,8 +63,8 @@ body {
 }
 
 .navbar .navbar-logo {
-  font-size: 3rem;
-  font-family: var(--explora);
+  font-size: 2.2rem;
+  font-family: analogue;
   color: var(--bg);
   font-weight: bold;
 }
@@ -124,7 +141,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
 }
 
 .hero .content h4 {
@@ -133,6 +149,8 @@ body {
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
   margin-top: 0;
+  font-family: analogue;
+  font-weight: 200;
 }
 
 .hero .content h1 {
@@ -141,6 +159,7 @@ body {
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
+  font-family: analogue;
 }
 
 .hero .content h1 span {
@@ -148,14 +167,14 @@ body {
 }
 
 .hero .content a {
-  /* margin-top: 3rem; */
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   font-weight: 500;
+  margin-top: 1.5rem;
 }
 .hero .content a span {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .hero .content .countdown {
@@ -177,12 +196,37 @@ body {
 
 /* about */
 .about {
+  padding: 10rem 7%;
+}
+
+.about .row {
   display: flex;
-  align-items: center;
-  background-image: url("../img/");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 5rem 2rem;
+}
+.about .row .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  /* font-weight: 600; */
+}
+.about .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 200;
 }
 
 /* media Queries */
@@ -230,6 +274,21 @@ body {
   }
   .navbar .navbar-nav a:hover:after {
     transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    text-align: center;
+  }
+  .about .row .content p {
+    font-size: 1.6rem;
   }
 }
 
