@@ -14,9 +14,25 @@
 }
 @font-face {
   font-family: analogue;
+  src: url("../fonts/MiConv.com__AnalogueRed-56Oblique.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: analogue;
   src: url("../fonts/MiConv.com__AnalogueRed-46LightOblique.woff") format("woff");
   font-weight: 200;
 }
+@font-face {
+  font-family: analogue;
+  src: url("../fonts/MiConv.com__AnalogueRed-76BoldOblique.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: analogue;
+  src: url("../fonts/MiConv.com__AnalogueRed-75Bold.woff") format("woff");
+  font-weight: 700;
+}
+
 /* MY CSS VARIABLE */
 :root {
   --explora: "Explora", cursive;
@@ -123,16 +139,6 @@ body {
   background-position: center;
 }
 
-.hero::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  background: linear-gradient(0deg, rgba(247, 247, 247, 1) 8%, rgba(1, 1, 3, 0) 50%);
-  bottom: 0;
-}
-
 .hero .content {
   padding-top: 7rem;
   margin: 5rem auto;
@@ -194,9 +200,43 @@ body {
   font-size: 0.8em;
 }
 
+/* quran */
+.quran {
+  padding: 7rem 7%;
+}
+
+.quran .row {
+  display: flex;
+}
+.quran .row .quran-img {
+  flex: 1 1 45rem;
+}
+
+.quran .row .quran-img img {
+  width: 100%;
+}
+
+.quran .row .content {
+  flex: 1 1 35rem;
+  padding: 5rem 2rem;
+}
+.quran .row .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 500;
+}
+.quran .row .content p {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 200;
+}
 /* about */
 .about {
-  padding: 10rem 7%;
+  padding: 7rem 7%;
 }
 
 .about .row {
@@ -207,26 +247,112 @@ body {
 }
 
 .about .row .about-img img {
-  width: 100%;
+  width: 90%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 1rem 1rem 3rem rgba(58, 79, 71, 0.8);
 }
 
 .about .row .content {
   flex: 1 1 35rem;
-  padding: 5rem 2rem;
+  padding: 10rem 2rem;
 }
 .about .row .content h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--dark-75);
-  font-family: analogue;
-  /* font-weight: 600; */
+  font-family: var(--poppins);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .about .row .content p {
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
   color: var(--dark-75);
   font-family: analogue;
-  font-weight: 200;
+  font-weight: 400;
+}
+.about .row .content span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 100;
+}
+.cba {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  font-size: 1.4rem;
+  background-color: var(--warning);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+}
+.cba i {
+  margin-right: 0.5rem;
+}
+
+/* about2 */
+.about2 {
+  padding: 7rem 7%;
+}
+
+.about2 .row {
+  display: flex;
+}
+.about2 .row .about2-img {
+  flex: 1 1 45rem;
+  order: 2;
+}
+
+.about2 .row .about2-img img {
+  width: 90%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 1rem 1rem 3rem rgba(58, 79, 71, 0.8);
+}
+
+.about2 .row .content {
+  flex: 1 1 35rem;
+  padding: 10rem 2rem;
+}
+.about2 .row .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--dark-75);
+  font-family: var(--poppins);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about2 .row .content p {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 400;
+}
+.about2 .row .content span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--dark-75);
+  font-family: analogue;
+  font-weight: 100;
+}
+.cba {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  font-size: 1.4rem;
+  background-color: var(--warning);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+}
+.cba i {
+  margin-right: 0.5rem;
 }
 
 /* media Queries */
@@ -276,19 +402,110 @@ body {
     transform: scaleX(0.2);
   }
 
-  .about .row {
+  /* Quran */
+  .quran .row {
     flex-wrap: wrap;
   }
-  .about .row .about-img img {
+  .quran .row .quran-img img {
     height: 24rem;
     object-fit: cover;
     object-position: center;
   }
-  .about .row .content {
+  .quran .row .content {
     text-align: center;
+    padding: 0;
+  }
+  .quran .row .content h3 {
+    font-size: 2.8rem;
+    margin-top: 0.7rem;
+  }
+  .quran .row .content p {
+    font-size: 2rem;
+    margin-top: 0.7rem;
+  }
+
+  /* about */
+  .about {
+    padding: 0;
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 50rem;
+    width: 75%;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0.8rem 0.8rem 2.4rem rgba(58, 79, 71, 0.8);
+  }
+  .about .row .content {
+    text-align: left;
+    padding: 0.7rem 7%;
+
+    margin-top: 0.5rem;
+  }
+  .about .row .content h3 {
+    font-size: 2.8rem;
+    margin-top: 0.7rem;
   }
   .about .row .content p {
     font-size: 1.6rem;
+    margin: 0rem;
+  }
+  .about .row .content span {
+    font-size: 1.6rem;
+  }
+  .about .row .content i {
+    font-size: 1rem;
+  }
+  .cba {
+    padding: 0.5rem 1.8rem;
+    margin-top: 1rem;
+  }
+  .about2 {
+    padding: 8rem 0;
+  }
+  .about2 .row {
+    flex-wrap: wrap;
+  }
+  .about2 .row .about2-img {
+    order: 1;
+    flex: 0 0 100%;
+    text-align: right;
+  }
+  .about2 .row .about2-img img {
+    height: 50rem;
+    width: 75%;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0.8rem 0.8rem 2.4rem rgba(58, 79, 71, 0.8);
+  }
+  .about2 .row .content {
+    order: 1;
+    flex: 0 0 100%;
+    padding: 0 7%;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+  .about2 .row .content h3 {
+    font-size: 2.8rem;
+    margin-top: 0.7rem;
+  }
+  .about2 .row .content p {
+    font-size: 1.6rem;
+    margin: 0rem;
+  }
+  .about2 .row .content span {
+    font-size: 1.6rem;
+  }
+  .about2 .row .content i {
+    font-size: 1rem;
+  }
+  .cba {
+    padding: 0.5rem 1.8rem;
+    margin-top: 1rem;
   }
 }
 
