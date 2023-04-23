@@ -236,7 +236,7 @@ body {
 }
 /* about */
 .about {
-  padding: 7rem 7%;
+  padding: 7rem 7% 1.4rem;
 }
 
 .about .row {
@@ -268,7 +268,7 @@ body {
 }
 .about .row .content p {
   font-size: 2rem;
-  margin-bottom: 0.8rem;
+  margin: 0;
   color: var(--dark-75);
   font-family: analogue;
   font-weight: 400;
@@ -276,7 +276,7 @@ body {
 .about .row .content span {
   font-size: 1.8rem;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-75);
   font-family: analogue;
   font-weight: 100;
@@ -296,7 +296,8 @@ body {
 
 /* about2 */
 .about2 {
-  padding: 7rem 7%;
+  padding: 7rem 7% 1.4rem;
+  background: var(--gray-25);
 }
 
 .about2 .row {
@@ -329,7 +330,7 @@ body {
 }
 .about2 .row .content p {
   font-size: 2rem;
-  margin-bottom: 0.8rem;
+  margin: 0;
   color: var(--dark-75);
   font-family: analogue;
   font-weight: 400;
@@ -337,22 +338,45 @@ body {
 .about2 .row .content span {
   font-size: 1.8rem;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-75);
   font-family: analogue;
   font-weight: 100;
 }
-.cba {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  color: #fff;
-  font-size: 1.4rem;
-  background-color: var(--warning);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+
+/* story */
+
+.story {
+  padding: 7rem 7% 1.4rem;
 }
-.cba i {
-  margin-right: 0.5rem;
+
+.story h2 {
+  font-size: 5rem;
+  font-family: analogue;
+  text-align: center;
+  color: var(--dark-75);
+  font-weight: 100;
+}
+
+.story .part {
+  text-align: center;
+  margin: 3rem;
+}
+
+.story .part h3 {
+  font-size: 2rem;
+  color: var(--dark-75);
+  font-weight: 400;
+  font-family: analogue;
+  margin: 2rem;
+}
+
+.story .part p {
+  font-size: 1.6rem;
+  color: var(--dark-75);
+  font-weight: 100;
+  font-family: analogue;
+  margin: 2rem;
 }
 
 /* media Queries */
@@ -426,7 +450,7 @@ body {
 
   /* about */
   .about {
-    padding: 0;
+    padding: 4rem 0;
   }
   .about .row {
     flex-wrap: wrap;
@@ -464,7 +488,7 @@ body {
     margin-top: 1rem;
   }
   .about2 {
-    padding: 8rem 0;
+    padding: 4rem 0;
   }
   .about2 .row {
     flex-wrap: wrap;
@@ -507,6 +531,8 @@ body {
     padding: 0.5rem 1.8rem;
     margin-top: 1rem;
   }
+
+  /* story */
 }
 
 /* Mobile Phone  */
