@@ -459,10 +459,10 @@ body {
 .event .card .box-date .title-event {
   padding: 1rem 3rem;
   text-align: center;
-  background-color: var(--warning);
+  background-color: var(--dark-75);
 }
 .event .card .box-date .title-event h3 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   color: var(--bg);
   font-family: power;
   text-shadow: 1px 1px 3px rgba(252, 255, 254, 0.2);
@@ -606,10 +606,10 @@ body {
 .event-2 .card .box-date .title-event-2 {
   padding: 1rem 3rem;
   text-align: center;
-  background-color: var(--warning);
+  background-color: var(--dark-75);
 }
 .event-2 .card .box-date .title-event-2 h3 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   color: var(--bg);
   font-family: power;
   text-shadow: 1px 1px 3px rgba(252, 255, 254, 0.2);
@@ -869,18 +869,17 @@ body {
     position: relative;
     flex: 1 1 15rem;
   }
+  .event .card .box-date .title-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transform: none;
+  }
   .event .card .box-date .title-event h3 {
     transform: rotate(-90deg);
-    transform-origin: top left;
-    position: absolute;
-    top: 295px;
-    left: 30px;
-  }
-  .event .card .box-date .title-event h3 span {
-    transform-origin: top left;
-    position: absolute;
-    top: 0;
-    left: 120px;
+    writing-mode: horizontal-tb;
+    /* margin: 0; */
   }
 
   .event .card .box-date .date-event {
@@ -917,17 +916,18 @@ body {
     flex: 0 0 100%;
   }
   .event-2 .card .box-date .title-event-2 {
-    position: relative;
-    flex: 1 1 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transform: none;
     order: 2;
-    text-align: right;
   }
   .event-2 .card .box-date .title-event-2 h3 {
     transform: rotate(90deg);
-    transform-origin: top left;
-    position: absolute;
-    top: 100px;
-    left: 80px;
+    writing-mode: horizontal-tb;
+    text-align: right;
+    margin: 0;
   }
 
   .event-2 .card .box-date .date-event-2 {
