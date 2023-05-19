@@ -879,47 +879,47 @@ body {
 .rsvp .row {
   display: flex;
   margin-top: -2rem;
-  background-color: var(--bg);
 }
 .rsvp .row .rsvp-img {
   flex: 1 1 45rem;
   width: 55%;
   object-fit: cover;
+  height: 100%;
 }
-.rsvp .row form {
+.rsvp .row .message {
   flex: 1 1 45rem;
   padding: 4rem 2rem;
   text-align: center;
   font-family: analogue;
+  background-color: var(--bg);
 }
-.rsvp .row form .input-group {
+.rsvp .row .message form .input-group {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--gray-50);
+  padding: 1.5rem 0;
 }
-.rsvp .row form .input-group input,
-.rsvp .row form .input-group select {
+.rsvp .row .message form .input-group input,
+.rsvp .row .message form .input-group select {
   width: 100%;
-  padding: 1.2rem 0;
   font-size: 1.6rem;
   font-family: analogue;
   background: none;
   vertical-align: top;
 }
-.rsvp .row form .input-group textarea {
+.rsvp .row .message form .input-group textarea {
   width: 100%;
   height: 7rem;
-  padding: 1.2rem 0;
   font-size: 1.6rem;
   background: none;
 }
-.rsvp .row form .btn {
+.rsvp .row .message form .btn {
   display: inline-block;
   padding: 0.5rem 1.8rem;
   color: #fff;
   font-size: 1.4rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   background-color: var(--dark-100);
   box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   letter-spacing: 2px;
@@ -927,6 +927,50 @@ body {
   cursor: pointer;
 }
 
+.rsvp .message .container-card {
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: 2rem;
+  font-family: var(--poppins);
+}
+.rsvp .message .container-card .card-message {
+  max-height: 25rem;
+  overflow-y: scroll;
+  scrollbar-color: var(--warning) var(--bg);
+  overflow-x: none;
+}
+.rsvp .message .container-card .card-message::-webkit-scrollbar {
+  width: 10px;
+  overflow-x: none;
+}
+.rsvp .message .container-card .card-message::-webkit-scrollbar-track {
+  background-color: var(--bg);
+  margin-block: 2px;
+  border-radius: 0.3em;
+}
+.rsvp .message .container-card .card-message::-webkit-scrollbar-thumb {
+  background-color: var(--warning);
+  border-radius: 0.3em;
+}
+.rsvp .message .container-card .title {
+  font-size: 1.7rem;
+  color: var(--dark-100);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.rsvp .message .container-card h4 {
+  font-size: 1.2rem;
+  color: var(--gray-50);
+  font-weight: 400;
+}
+.rsvp .message .container-card p {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  color: var(--dark-100);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-100);
+}
 /* media Queries */
 
 /* Laptop */
@@ -1192,7 +1236,7 @@ body {
     object-position: center;
   }
 
-  .rsvp .row form {
+  .rsvp .row .message {
     padding: 3rem 7%;
   }
 }

@@ -279,26 +279,33 @@
       <div class="row">
 
         <img src="images/rsvp.jpg" alt="" class="rsvp-img">
-        <form action="">
-          <div class="input-group">
-            <input type="text" placeholder="Nama">
+        <div class="message">
+          <form id="formMessage">
+            <div class="input-group">
+              <input type="text" name="nama" placeholder="Nama">
+            </div>
+            <div class="input-group">
+              <input type="text" name="hubungan" placeholder="Hubungan (Saudara, Teman Kerja, Teman Sekolah)">
+            </div>
+            <div class="input-group">
+              <textarea  cols="30" rows="10" name="pesan" placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
+            </div>
+            <div class="input-group">
+              <select name="" id="">
+                <option >Konfirmasi Kehadiran</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak">Tidak Hadir</option>
+                <option value="Ragu">Masih Ragu</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Send  <i data-feather="arrow-right" style="vertical-align: middle"></i></button>
+          </form>
+          <div class="container-card">
+            <div class="card-message">
+             
+            </div>
           </div>
-          <div class="input-group">
-            <input type="text" placeholder="Hubungan (Saudara, Teman Kerja, Teman Sekolah)">
-          </div>
-          <div class="input-group">
-            <textarea  cols="30" rows="10" placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
-          </div>
-          <div class="input-group">
-            <select name="" id="">
-              <option >Konfirmasi Kehadiran</option>
-              <option value="Hadir">Hadir</option>
-              <option value="Tidak">Tidak Hadir</option>
-              <option value="Ragu">Masih Ragu</option>
-            </select>
-          </div>
-          <button type="submit" class="btn">Send  <i data-feather="arrow-right" style="vertical-align: middle"></i></button>
-        </form>
+        </div>
       </div>
     </section>
     <!-- End RSVP -->
@@ -311,5 +318,9 @@
     <script src="js/script.js"></script>
     <!-- Lihgtbox js -->
     <script src="js/lightbox-plus-jquery.js"></script>
+    <!-- jquery -->
+    <script src="js/jquery.js"></script>
+    <!-- Message Strorage -->
+    <script src="js/strorage.js"></script>
   </body>
 </html>
