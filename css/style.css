@@ -34,7 +34,7 @@
 }
 @font-face {
   font-family: power;
-  src: url("../fonts/power.woff") format("woff");
+  src: url("../fonts/power.woff2") format("woff2");
   font-weight: normal;
 }
 
@@ -178,7 +178,7 @@ body {
 }
 
 .hero .content a {
-  font-size: 1.5em;
+  font-size: 2em;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   font-weight: 500;
@@ -195,8 +195,8 @@ body {
 }
 
 .hero .content .countdown .waktu {
-  margin: 5rem 2rem;
-  font-size: 2em;
+  margin: 5rem 1.7rem;
+  font-size: 2rem;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
 }
@@ -272,7 +272,7 @@ body {
   text-transform: uppercase;
 }
 .about .row .content p {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 0;
   color: var(--dark-75);
   font-family: analogue;
@@ -334,7 +334,7 @@ body {
   text-transform: uppercase;
 }
 .about2 .row .content p {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 0;
   color: var(--dark-75);
   font-family: analogue;
@@ -357,10 +357,11 @@ body {
 
 .story h2 {
   font-size: 5rem;
-  font-family: analogue;
+  font-family: power;
   text-align: center;
   color: var(--dark-75);
-  font-weight: 100;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .story .part {
@@ -494,7 +495,7 @@ body {
 .event .card .box-date .date-event .tgl {
   font-size: 8rem;
   color: var(--dark-75);
-  font-family: analogue, sans-serif;
+  font-family: analogue;
   font-weight: 200;
   text-transform: uppercase;
   text-align: center;
@@ -609,6 +610,7 @@ body {
 .event-2 .card .box-date {
   flex: 1 1 40rem;
   background-color: var(--bg);
+  margin-bottom: 1rem;
 }
 .event-2 .card .box-date .title-event-2 {
   padding: 1rem 3rem;
@@ -627,7 +629,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   flex-wrap: wrap;
   /* gap: 2rem; */
 }
@@ -641,7 +643,7 @@ body {
 .event-2 .card .box-date .date-event-2 .tgl {
   font-size: 8rem;
   color: var(--dark-75);
-  font-family: analogue, sans-serif;
+  font-family: analogue;
   font-weight: 200;
   text-transform: uppercase;
   text-align: center;
@@ -706,15 +708,12 @@ body {
 }
 
 /* Gallery */
-.bg-gallery {
-  background-color: var(--gray-25);
-}
+
 .gallery h2 {
   font-size: 6rem;
   color: var(--dark-100);
   font-family: var(--explora);
   font-weight: 200;
-  /* text-align: center; */
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
   margin-bottom: 2rem;
 }
@@ -725,11 +724,7 @@ body {
   border-bottom: 0.1rem solid var(--dark-100);
   width: 50%;
 }
-.gallery .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+
 .gallery .container .img-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -738,10 +733,198 @@ body {
 .gallery .container .img-gallery img {
   width: 100%;
   transition: transform 0.5s ease;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 .gallery .container .img-gallery img:hover {
   transform: scale(1.1);
   filter: brightness(35%);
+}
+
+/* Gift */
+.gift {
+  padding: 7rem 7%;
+  background-color: var(--gray-25);
+}
+
+.gift h2 {
+  font-size: 5rem;
+  font-family: power;
+  text-align: center;
+  color: var(--dark-75);
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+.gift p {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-size: 1.4rem;
+  color: var(--dark-75);
+  margin-bottom: 4rem;
+  /* line-height: 1.5rem; */
+}
+.gift .buttom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gift .card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  max-height: 0;
+  overflow: hidden;
+  animation: containerSlideDown 0.5s ease forwards;
+  opacity: 0;
+  transition: max-height 0.5s ease;
+}
+@keyframes containerSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-container.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.gift .card {
+  background-color: #fff;
+  color: var(--dark-75);
+  border-radius: 4px;
+  width: 100%;
+  padding: 3rem;
+  margin: 1.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom left, rgba(205, 204, 204, 0.445) 30%, #fff 70%);
+  transform-origin: top;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.card-container.show .card {
+  animation: cardFadeIn 0.2s ease 0.2s forwards;
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    /* transform: translateY(-20px); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+}
+
+.gift .card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.gift .card h5 {
+  font-size: 1.4rem;
+}
+.gift .card p {
+  text-align: center;
+  max-width: 40rem;
+  font-size: 1.3rem;
+  color: var(--dark-75);
+  margin: 2rem 3rem;
+}
+#yani {
+  margin: 1rem 2rem;
+}
+.rekening {
+  display: inline-block;
+  padding: 0.5rem 1.8rem;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: var(--dark-100);
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.rekening i {
+  margin-right: 0.7rem;
+}
+.salin {
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--dark-100);
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.salin i {
+  margin-right: 0.7rem;
+}
+/* RSVP */
+.rsvp {
+  padding: 7rem 7% 1.4rem;
+  background-color: var(--gray-25);
+}
+.rsvp .row {
+  display: flex;
+  margin-top: -2rem;
+  background-color: var(--bg);
+}
+.rsvp .row .rsvp-img {
+  flex: 1 1 45rem;
+  width: 55%;
+  object-fit: cover;
+}
+.rsvp .row form {
+  flex: 1 1 45rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: analogue;
+}
+.rsvp .row form .input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-50);
+}
+.rsvp .row form .input-group input,
+.rsvp .row form .input-group select {
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
+  font-family: analogue;
+  background: none;
+  vertical-align: top;
+}
+.rsvp .row form .input-group textarea {
+  width: 100%;
+  height: 7rem;
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
+  background: none;
+}
+.rsvp .row form .btn {
+  display: inline-block;
+  padding: 0.5rem 1.8rem;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: var(--dark-100);
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* media Queries */
@@ -989,6 +1172,28 @@ body {
   }
   .event-2 .card .box-date .date-event-2 .jam p {
     margin-top: 1rem;
+  }
+
+  /* gift */
+  .gift .card-container {
+    flex-wrap: wrap;
+  }
+
+  /* rsvp */
+  .rsvp {
+    padding: 0;
+  }
+  .rsvp .row {
+    flex-wrap: wrap;
+  }
+  .rsvp .row .rsvp-img {
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .rsvp .row form {
+    padding: 3rem 7%;
   }
 }
 
