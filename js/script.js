@@ -13,6 +13,28 @@ document.addEventListener("click", function (e) {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Ambil elemen slide dan atur slide pertama sebagai aktif
+  var slides = document.querySelectorAll(".slide");
+  var currentSlide = 0;
+  slides[currentSlide].classList.add("active");
+
+  // Fungsi untuk pindah ke slide berikutnya
+  function nextSlide() {
+    // Sembunyikan slide saat ini
+    slides[currentSlide].classList.remove("active");
+
+    // Pindah ke slide berikutnya
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    // Tampilkan slide berikutnya
+    slides[currentSlide].classList.add("active");
+  }
+
+  // Atur interval perpindahan slide
+  setInterval(nextSlide, 5000);
+});
+
 // fitur Hitung Mundur
 // Mengatur waktu akhir perhitungan mundur
 var countDownDate = new Date("Jun 30, 2023 10:00:00").getTime();

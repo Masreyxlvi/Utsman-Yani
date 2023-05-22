@@ -138,10 +138,42 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../images/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero .content {
+  padding-top: 7rem;
+  margin: 5rem auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
 }
 
 .hero .content {
@@ -949,7 +981,7 @@ body {
   border-radius: 0.3em;
 }
 .rsvp .message .container-card .card-message::-webkit-scrollbar-thumb {
-  background-color: var(--warning);
+  background-color: var(--dark-75);
   border-radius: 0.3em;
 }
 .rsvp .message .container-card .title {
@@ -969,7 +1001,7 @@ body {
   margin-top: 0.5rem;
   color: var(--dark-100);
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--dark-75);
 }
 /* media Queries */
 
