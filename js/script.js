@@ -88,7 +88,7 @@ showCardButton.addEventListener("click", function () {
 
 function showCardsSequentially() {
   cards.forEach((card, index) => {
-    card.style.animation = `cardFadeIn 0.5s ease ${index * 0.5 + 0.5}s forwards`;
+    card.style.animation = `cardFadeIn 0.2s ease ${index * 0.2 + 0.2}s forwards`;
   });
 }
 
@@ -96,4 +96,31 @@ function resetCardStyles() {
   cards.forEach((card) => {
     card.style.animation = "";
   });
+}
+
+function noUtsman() {
+  var teks = document.getElementById("textSalin").textContent;
+  var teksTanpaTanda = teks.replace(/-/g, "");
+
+  var textarea = document.createElement("textarea");
+  textarea.value = teksTanpaTanda;
+  document.body.appendChild(textarea);
+
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  toastr["success"]("No Dana Berhasil Disalin", "Success");
+}
+function noYani() {
+  var teks = document.getElementById("textSalin2").textContent;
+  var teksTanpaTanda = teks.replace(/-/g, "");
+
+  var textarea = document.createElement("textarea");
+  textarea.value = teksTanpaTanda;
+  document.body.appendChild(textarea);
+
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  toastr["success"]("No Dana Berhasil Disalin", "Success");
 }

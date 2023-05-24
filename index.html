@@ -17,6 +17,8 @@
     <!-- Lightbox -->
     <link rel="stylesheet" href="css/lightbox.css">
     <title>The Wedding Of : Utsman & Yani Mulyani</title>
+    <!-- toastr -->
+    <link rel="stylesheet" href="toastr/toastr.min.css">
   </head>
   <body>
     <!-- navbar start -->
@@ -47,7 +49,7 @@
       </div>
       <div class="content">
         <h4>The Wedding Of</h4>
-        <h1>Ustman <span> &</span> Yani</h1>
+        <h1>Utsman <span> &</span> Yani</h1>
         <a href="">Save The Date | <span>30 . 07 . 2023</span></a>
         <div class="countdown" id="countdown">
           <div class="waktu">
@@ -262,20 +264,17 @@
       <div class="card-container" id="card-container">
         <div class="card">
           <h3>DANA</h3>
-          <h5>0813-1981-7474</h5>
-          <p id="yani">Yani Mulyani</p>
-          <button class="salin" id="show-cards"> <i data-feather="copy" style="vertical-align: middle"></i> Salin No.Dana </button>
+          <h5 id="textSalin">0821-2087-7636</h5>
+          <p id="yani">Utsman</p>
+          <button class="salin" id="show-cards" onclick="noUtsman()"> <i data-feather="copy" style="vertical-align: middle"></i> Salin No.Dana </button>
         </div>
         <div class="card">
-          <h3>GIFT</h3>
-          <h5>
-            Penerima: 
-            <br>
-            Yani Mulyani
-          </h5>
-          <p>Kp. Cisaru Kulon, RT/RW 002/008, Kelurahan Rancagoong, Kec Cilaku</p>
-          <button class="salin" id="show-cards"> <i data-feather="copy" style="vertical-align: middle"></i> Salin Alamat </button>
+          <h3>DANA</h3>
+          <h5 id="textSalin2">0813-1981-7474</h5>
+          <p id="yani">Yani Mulyani</p>
+          <button class="salin" onclick="noYani()" id="show-cards"> <i data-feather="copy" style="vertical-align: middle"></i> Salin No.Dana </button>
         </div>
+    
       </div>
     </section>
     <!-- End Wedding gift -->
@@ -315,10 +314,37 @@
     <!-- End RSVP -->
 
     <!-- Start Doa -->
-    
+    <section class="doa" id="home">
+  
+      <div class="content">
+        <h1>TerimaKasih</h1>
+        <h4>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.</h4>
+        <h4 style="margin-top: 6rem;">KAMI YANG BERBAHAGIA</h4>
+        <h3>Utsman <span>&</span> Yani</h3>
+      </div>
+    </section>
     <!-- End Doa -->
 
-    <!-- father icons -->
+    <!-- start footer -->
+    <footer>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo">
+        <a href="#" style="vertical-align: middle">Masreyxlvi.com</a>
+      </div>
+      <div class="socials">
+        <a href="" class="wa">
+          WA : 0813 1336 2467 
+        </a>
+        <a href="" class="ig">| IG : @masreyxlvi</a>
+      </div>
+      <div class="credit">
+        <p>Copyright &copy; 2022 - 2023</p>
+        <h5>HUBUNGI KAMI</h5>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- father icons -->  
     <script>
       feather.replace();
     </script>
@@ -330,5 +356,7 @@
     <script src="js/lightbox-plus-jquery.js"></script>
     <!-- Message Strorage -->
     <script src="js/strorage.js"></script>
+    <!-- toastr -->
+    <script src="toastr/toastr.min.js"></script>
   </body>
 </html>

@@ -415,6 +415,7 @@ body {
   font-weight: 100;
   font-family: analogue;
   margin: 2rem;
+  letter-spacing: 0.5px;
 }
 
 /* event */
@@ -740,7 +741,9 @@ body {
 }
 
 /* Gallery */
-
+.gallery {
+  padding: 7rem 7% 1.4rem;
+}
 .gallery h2 {
   font-size: 6rem;
   color: var(--dark-100);
@@ -905,9 +908,11 @@ body {
 }
 /* RSVP */
 .rsvp {
-  padding: 7rem 7% 1.4rem;
-  background-color: var(--gray-25);
+  padding: 7rem 7% 5rem;
+  background-color: var(--bg);
+  position: relative;
 }
+
 .rsvp .row {
   display: flex;
   margin-top: -2rem;
@@ -1003,6 +1008,123 @@ body {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--dark-75);
 }
+
+/* Hero Section */
+.doa {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.doa::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  position: absolute;
+  bottom: 0;
+}
+
+.doa .content {
+  padding-top: 7rem;
+  margin: 5rem auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.doa .content {
+  padding: 5rem 7%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.doa .content h1 {
+  font-size: 4em;
+  font-weight: 700;
+  font-family: var(--explora);
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.doa .content h4 {
+  font-size: 1.5em;
+  color: var(--bg);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  font-weight: 600;
+  max-width: 50rem;
+}
+.doa .content h3 {
+  font-size: 3em;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
+  text-transform: uppercase;
+  font-family: analogue;
+}
+.doa .content h3 span {
+  color: var(--warning);
+}
+
+/* footer */
+footer {
+  padding: 1.7rem 0;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+footer .logo {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* color: var(--dark-75); */
+}
+footer .logo img {
+  width: 3.4rem;
+  border-radius: 50%;
+}
+footer .logo a {
+  font-size: 1.8rem;
+  color: var(--dark-75);
+  margin-left: 1rem;
+}
+
+footer .socials,
+footer .credit {
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+  letter-spacing: 1px;
+}
+footer .socials a,
+footer .credit {
+  color: var(--dark-75);
+}
+footer .socials a:hover {
+  color: var(--warning);
+}
+
+footer .credit h5 {
+  margin: 3rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 /* media Queries */
 
 /* Laptop */
