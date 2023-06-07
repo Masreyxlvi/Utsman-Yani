@@ -1,16 +1,50 @@
-// toggle class active
-const navbarNav = document.querySelector(".navbar-nav");
-// ketika menu di klik
-document.querySelector("#menu").onclick = () => {
-  navbarNav.classList.toggle("active");
-};
+// Ambil elemen-elemen yang dibutuhkan
+var popup = document.getElementById("myPopup");
+var closeBtn = document.getElementsByClassName("close")[0];
+var isAudioPlaying = false;
+var logo = document.getElementById("logo");
 
-const menu = document.querySelector("#menu");
+// Fungsi untuk menampilkan popup
+function showPopup() {
+  popup.style.display = "flex";
+  setTimeout(function () {
+    popup.style.transform = "translateY(0)";
+    popup.style.opacity = 1;
+  }, 100); // Tambahkan penundaan agar animasi berfungsi dengan baik
+}
 
-document.addEventListener("click", function (e) {
-  if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
+// Fungsi untuk menyembunyikan popup
+function hidePopup() {
+  var popupAudio = document.getElementById("popupAudio");
+  popupAudio.play(); // Menghentikan audio
+  popup.style.transform = "translateY(-100%)";
+  popup.style.opacity = 0;
+  setTimeout(function () {
+    popup.style.display = "none";
+    popup.style.opacity = 1;
+    popup.style.transform = "translateY(0)"; // Reset transformasi saat popup disembunyikan
+  }, 3000); // Waktu yang sesuai dengan durasi transisi
+}
+
+function pause() {
+  var popupAudio = document.getElementById("popupAudio");
+  if (isAudioPlaying) {
+    popupAudio.pause(); // Menghentikan lagu jika sedang diputar
+    isAudioPlaying = false;
+  } else {
+    popupAudio.play(); // Memulai kembali lagu jika tidak sedang diputar
+    isAudioPlaying = true;
   }
+}
+
+// Tambahkan event listener pada tombol tutup
+closeBtn.addEventListener("click", hidePopup);
+logo.addEventListener("click", pause);
+// Tampilkan popup setelah halaman dimuat
+window.onload = showPopup;
+
+$(document).ready(function () {
+  $(".example1").arctext({ radius: 200 });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
