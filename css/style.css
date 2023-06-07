@@ -484,7 +484,7 @@ body {
   flex: 1 1 40rem;
 }
 .event .card .box-img .slider-img {
-  height: 480px;
+  height: 100%;
   display: flex;
   animation: slide 16s ease-out infinite;
 }
@@ -492,6 +492,7 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 3/1;
 }
 
 @keyframes slide {
@@ -528,7 +529,7 @@ body {
 .event .card .box-date .title-event {
   padding: 1rem 3rem;
   text-align: center;
-  background-color: var(--warning);
+  background-color: var(--dark-75);
 }
 .event .card .box-date .title-event h3 {
   font-size: 3rem;
@@ -636,7 +637,7 @@ body {
   order: 2;
 }
 .event-2 .card .box-img .slider-img {
-  height: 480px;
+  height: 100%;
   display: flex;
   animation: slide 16s infinite;
 }
@@ -644,6 +645,7 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 3/1;
 }
 
 @keyframes slide {
@@ -675,7 +677,7 @@ body {
 .event-2 .card .box-date .title-event-2 {
   padding: 1rem 3rem;
   text-align: center;
-  background-color: var(--warning);
+  background-color: var(--dark-75);
 }
 .event-2 .card .box-date .title-event-2 h3 {
   font-size: 3rem;
@@ -790,14 +792,15 @@ body {
 
 .gallery .container .img-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
+  grid-template-columns: repeat(4, minmax(20rem, 1fr));
 }
+
 .gallery .container .img-gallery img {
   width: 100%;
   transition: transform 0.5s ease;
-  aspect-ratio: 3/2;
-  object-fit: contain;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 .gallery .container .img-gallery img:hover {
   transform: scale(1.1);
@@ -1042,7 +1045,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../images/bg2.jpg);
+  background-image: url(../images/doa.JPG);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1052,7 +1055,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   position: absolute;
   bottom: 0;
 }
@@ -1321,9 +1324,13 @@ footer .credit h5 {
     border-radius: 0 50% 0 0;
   }
   .event .card .box-img .slider-img {
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+  .event .card .box-img .slider-img img {
+    width: 100%;
+    aspect-ratio: 3/2;
   }
   .event .card .box-date {
     display: flex;
@@ -1370,9 +1377,13 @@ footer .credit h5 {
     flex: 0 0 100%;
   }
   .event-2 .card .box-img .slider-img {
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+  .event-2 .card .box-img .slider-img img {
+    width: 100%;
+    aspect-ratio: 3/2;
   }
   .event-2 .card .box-date {
     display: flex;
@@ -1409,6 +1420,10 @@ footer .credit h5 {
     margin-top: 1rem;
   }
 
+  /* gallery */
+  .gallery .container .img-gallery {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
   /* gift */
   .gift .card-container {
     flex-wrap: wrap;
@@ -1429,6 +1444,9 @@ footer .credit h5 {
 
   .rsvp .row .message {
     padding: 3rem 7%;
+  }
+  .doa .content {
+    padding-top: 33rem;
   }
 }
 

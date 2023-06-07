@@ -39,7 +39,13 @@ $(function () {
   $("#formMessage").on("submit", function (e) {
     e.preventDefault();
     dataMessage.push(insert());
-
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Terima Kasih Atas Ucapan & Doanya ",
+      showConfirmButton: false,
+      timer: 2000,
+    });
     $(".card-message").html(showData(dataMessage));
   });
 });
