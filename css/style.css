@@ -793,14 +793,13 @@ body {
 .gallery .container .img-gallery {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(4, minmax(20rem, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .gallery .container .img-gallery img {
   width: 100%;
-  transition: transform 0.5s ease;
-  aspect-ratio: 2/3;
   object-fit: cover;
+  aspect-ratio: 2/3;
 }
 .gallery .container .img-gallery img:hover {
   transform: scale(1.1);
@@ -1422,8 +1421,9 @@ footer .credit h5 {
 
   /* gallery */
   .gallery .container .img-gallery {
-    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
+
   /* gift */
   .gift .card-container {
     flex-wrap: wrap;
