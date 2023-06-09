@@ -197,6 +197,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 3/2;
   opacity: 0;
   transition: opacity 3s ease;
 }
@@ -451,9 +452,9 @@ body {
 .bg-event {
   background-image: url("../images/bg-event.jpg");
   background-size: cover;
+  overflow-x: hidden;
 }
-.event,
-.gallery {
+.event {
   padding: 7rem 7% 1.4rem;
 }
 
@@ -1167,7 +1168,7 @@ footer .credit h5 {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 65%;
   }
 
   .popup-content {
@@ -1249,7 +1250,6 @@ footer .credit h5 {
   .about .row .content {
     text-align: left;
     padding: 0.7rem 7%;
-
     margin-top: 0.5rem;
   }
   .about .row .content h3 {
