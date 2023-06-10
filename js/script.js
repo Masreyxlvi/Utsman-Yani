@@ -1,7 +1,7 @@
 // Ambil elemen-elemen yang dibutuhkan
 var popup = document.getElementById("myPopup");
 var closeBtn = document.getElementsByClassName("close")[0];
-var isAudioPlaying = false;
+var isAudioPlaying = true;
 var logo = document.getElementById("logo");
 
 // Fungsi untuk menampilkan popup

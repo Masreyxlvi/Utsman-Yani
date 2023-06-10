@@ -312,14 +312,14 @@ body {
 }
 .about .row .about-img {
   flex: 1 1 45rem;
-  height: 75%;
+  height: 100%;
 }
 
 .about .row .about-img img {
   width: 90%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 2/3;
   box-shadow: 1rem 1rem 3rem rgba(58, 79, 71, 0.8);
 }
 
@@ -356,8 +356,6 @@ body {
   color: #fff;
   font-size: 1.4rem;
   background-color: var(--warning);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
 }
 .cba i {
   margin-right: 0.5rem;
@@ -452,7 +450,7 @@ body {
 .bg-event {
   background-image: url("../images/bg-event.jpg");
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .event {
   padding: 7rem 7% 1.4rem;
@@ -538,7 +536,8 @@ body {
   font-family: power;
   text-shadow: 1px 1px 3px rgba(252, 255, 254, 0.2);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  font-weight: bold;
+  /* letter-spacing: 3px; */
 }
 
 .event .card .box-date .date-event {
@@ -1045,7 +1044,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../images/doa.JPG);
+  background-image: url(../images/popup.JPG);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1178,39 +1177,11 @@ footer .credit h5 {
   .hero .content {
     padding-top: 22rem;
   }
-  #menu {
-    display: inline-block;
-  }
-
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: var(--dark-100);
-    width: 25rem;
-    height: 100vh;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-nav a {
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 1.8rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-  .navbar .navbar-nav a:hover:after {
-    transform: scaleX(0.2);
-  }
 
   /* Quran */
+  .quran {
+    padding: 7rem 1rem;
+  }
   .quran .row {
     flex-wrap: wrap;
   }
@@ -1234,7 +1205,7 @@ footer .credit h5 {
 
   /* about */
   .about {
-    padding: 4rem 0;
+    padding: 7rem 0;
   }
   .about .row {
     flex-wrap: wrap;
@@ -1249,12 +1220,10 @@ footer .credit h5 {
   }
   .about .row .content {
     text-align: left;
-    padding: 0.7rem 7%;
-    margin-top: 0.5rem;
+    padding: 1.5rem 7%;
   }
   .about .row .content h3 {
     font-size: 2.8rem;
-    margin-top: 0.7rem;
   }
   .about .row .content p {
     font-size: 1.6rem;
@@ -1271,7 +1240,7 @@ footer .credit h5 {
     margin-top: 1rem;
   }
   .about2 {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
   .about2 .row {
     flex-wrap: wrap;
@@ -1282,7 +1251,7 @@ footer .credit h5 {
     text-align: right;
   }
   .about2 .row .about2-img img {
-    height: 50rem;
+    height: 55rem;
     width: 75%;
     padding: 0;
     object-fit: cover;
@@ -1292,7 +1261,7 @@ footer .credit h5 {
   .about2 .row .content {
     order: 1;
     flex: 0 0 100%;
-    padding: 0 7%;
+    padding: 1.5rem 7%;
     margin-top: 0.5rem;
     text-align: right;
   }
@@ -1367,6 +1336,9 @@ footer .credit h5 {
   }
 
   /* event-2 */
+  .event-2 {
+    padding: 7rem 7%;
+  }
   .event-2 .card {
     flex-wrap: wrap;
   }
