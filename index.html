@@ -29,9 +29,9 @@
     <!-- popup start -->
     <div id="myPopup" class="popup">
       <div class="popup-content">
-        <h2 class="example1">The Wedding Of</h2>
+        <h2 class="example1"></h2>
         <h1>Utsman <span> &</span> Yani.</h1>
-        <button class="close"><i data-feather="mail" style="vertical-align: middle"></i> Buka Undangan</button>
+        <button class="close" style="opacity: 0; y: -100;"><i data-feather="mail" style="vertical-align: middle; "></i> Buka Undangan</button>
         <audio id="popupAudio" src="audio/utsmansong.mp3"></audio> <!-- Ganti dengan path file audio yang sesuai -->
       </div>
     </div>
@@ -93,7 +93,7 @@
     <section class="about" id="about">
       <div class="row">
         <div class="about-img" data-aos="zoom-in-up">
-          <img src="images/about/utsman.jpg" alt="about" />
+          <img src="images/utsman.jpg" alt="about" />
         </div>
         <div class="content">
           <h3 data-aos="fade-up" >Utsman</h3>
@@ -109,7 +109,7 @@
     <section class="about2" id="about2">
       <div class="row">
         <div class="about2-img" data-aos="zoom-in-up">
-          <img src="images/about/yani.jpg" alt="about2" />
+          <img src="images/yani.jpg" alt="about2" />
         </div>
         <div class="content">
           <h3 data-aos="fade-up">Yani Mulyani</h3>
@@ -225,41 +225,29 @@
         <div class="container">
           <div class="img-gallery">
             <a href="images/gallery/1.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/1.JPG" alt="">
+              <img src="images/gallery/1.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/2.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/2.JPG" alt="">
+              <img src="images/gallery/2.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/3.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/3.JPG" alt="">
+              <img src="images/gallery/3.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/4.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/4.JPG" alt="">
-            </a>
-            <!-- <a href="images/gallery/5.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/5.JPG" alt="">
-            </a>
-            <a href="images/gallery/6.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/6.JPG" alt="">
-            </a>
-            <a href="images/gallery/7.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/7.JPG" alt="">
-            </a>
-            <a href="images/gallery/8.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/8.JPG" alt="">
+              <img src="images/gallery/4.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/9.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/9.JPG" alt="">
+              <img src="images/gallery/9.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/10.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/10.JPG" alt="">
+              <img src="images/gallery/10.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/11.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/11.JPG" alt="">
+              <img src="images/gallery/11.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/12.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/12.JPG" alt="">
-            </a> -->
+              <img src="images/gallery/12.JPG" alt="" class="img">
+            </a>
         
           </div>
         </div>
@@ -306,13 +294,6 @@
             <div class="input-group">
               <textarea  cols="30" rows="10" name="pesan" placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
             </div>
-            <!-- <div class="input-group">
-              <select name="" id="">
-                <option >Konfirmasi Kehadiran</option>
-                <option value="Hadir">Hadir</option>
-                <option value="Tidak">Tidak Hadir</option>
-              </select> 
-            </div> -->
             <button type="submit" class="btn">Send  <i data-feather="arrow-right" style="vertical-align: middle"></i></button>
           </form>
           <div class="container-card">
@@ -372,15 +353,43 @@
     <script src="assets/toastr/toastr.min.js"></script>
     <!-- Aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- gsap -->    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
     <!-- arctext -->
     <script src="assets/Arctext/js/jquery.arctext.js"></script>
     <!-- sweetalert -->
     <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
     <script>
-      AOS.init({
-        duration: 2500
-      });
+       gsap.registerPlugin(TextPlugin);
+       gsap.to('.example1', {
+            duration: 1,
+            delay: 1,
+            text: 'The Wedding of'
+        }); 
+        gsap.from('.popup-content h1', {
+            duration: 3,
+            delay: 2.5,
+            opacity: 0,
+            ease: 'elastic'
+        })
+        gsap.to('.close', {
+            duration: 1,
+            delay: 3.5,
+            y:0,
+            opacity: 100,
+            ease: 'elastic'
+        });
+        const gallery = document.querySelectorAll('.img-gallery');
+
+        gallery.forEach((img, i) => {
+            img.dataset.aos = 'zoom-out';
+            img.dataset.aosDelay = i * 300;
+        });
+        AOS.init({
+          duration: 2500,
+          once: true
+        });
       </script>
      
   </body>
