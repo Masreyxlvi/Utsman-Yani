@@ -4,20 +4,23 @@
 /* My FONTS */
 @font-face {
   font-family: analogue;
-  src: url("../fonts/Analogue.woff") format("woff");
+  src: url("../fonts/Analogue.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+/* 
 @font-face {
   font-family: analogue;
   src: url("../fonts/MiConv.com__Analogue\ Thin.woff") format("woff");
   font-weight: 100;
-}
+} */
 /* @font-face {
   font-family: analogue;
   src: url("../fonts/MiConv.com__AnalogueRed-56Oblique.woff") format("woff");
   font-weight: 500;
 } */
-@font-face {
+/* @font-face {
   font-family: analogue;
   src: url("../fonts/MiConv.com__AnalogueRed-46LightOblique.woff") format("woff");
   font-weight: 200;
@@ -32,11 +35,13 @@
   src: url("../fonts/MiConv.com__AnalogueRed-75Bold.woff") format("woff");
   font-weight: 700;
 }
+ */
 @font-face {
   font-family: power;
   src: url("../fonts/power.woff2") format("woff2");
   font-weight: normal;
 }
+/* Start Custom Fonts CSS */
 
 /* MY CSS VARIABLE */
 :root {
@@ -103,7 +108,7 @@ body {
   font-size: 2em;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
-  font-weight: 400;
+  font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
@@ -114,8 +119,9 @@ body {
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
-  font-family: analogue;
+  font-family: analogue, Sans-Serif;
   margin-bottom: 4rem;
+  letter-spacing: 1px;
 }
 .popup-content h1 span {
   color: var(--warning);
@@ -222,18 +228,19 @@ body {
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
-  margin: 1rem 0;
-  font-family: analogue;
-  font-weight: 200;
+  margin: 2rem 0;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .hero .content h1 {
   font-size: 4em;
-  font-weight: 700;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
-  font-family: analogue;
+  font-family: analogue, sans-serif;
+  letter-spacing: 1px;
 }
 
 .hero .content h1 span {
@@ -261,6 +268,8 @@ body {
   margin: 5rem 1.7rem;
   font-size: 2rem;
   color: var(--bg);
+  font-family: "Poppins", Sans-serif;
+  font-weight: normal;
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
 }
 
@@ -293,14 +302,14 @@ body {
   margin-bottom: 1rem;
   color: var(--dark-75);
   font-family: analogue;
-  font-weight: 500;
 }
 .quran .row .content p {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 0.8rem;
-  color: var(--dark-75);
-  font-family: analogue;
-  font-weight: 200;
+  color: var(--gray-50);
+  font-family: "Poppins", Sans-serif;
+  font-weight: normal;
+  font-style: italic;
 }
 /* about */
 .about {
@@ -326,29 +335,28 @@ body {
 .about .row .content {
   flex: 1 1 35rem;
   padding: 10rem 2rem;
+  color: var(--dark-75);
 }
 .about .row .content h3 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: var(--dark-75);
-  font-family: var(--poppins);
-  font-weight: 700;
+  font-family: analogue, sans-serif;
+  font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .about .row .content p {
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin: 0;
-  color: var(--dark-75);
-  font-family: analogue;
-  font-weight: 400;
+  font-family: var(--poppins);
+  font-weight: 600;
 }
 .about .row .content span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: block;
   margin-bottom: 1.5rem;
-  color: var(--dark-75);
-  font-family: analogue;
-  font-weight: 100;
+  font-family: var(--poppins);
+  font-weight: normal;
 }
 .cba {
   display: inline-block;
@@ -356,6 +364,7 @@ body {
   color: #fff;
   font-size: 1.4rem;
   background-color: var(--warning);
+  text-transform: uppercase;
 }
 .cba i {
   margin-right: 0.5rem;
@@ -387,29 +396,28 @@ body {
 .about2 .row .content {
   flex: 1 1 35rem;
   padding: 10rem 2rem;
+  color: var(--dark-75);
 }
 .about2 .row .content h3 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: var(--dark-75);
-  font-family: var(--poppins);
-  font-weight: 700;
+  font-family: analogue, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .about2 .row .content p {
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin: 0;
-  color: var(--dark-75);
-  font-family: analogue;
-  font-weight: 400;
+  font-family: var(--poppins);
+  font-weight: 600;
 }
 .about2 .row .content span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: block;
   margin-bottom: 1.5rem;
-  color: var(--dark-75);
-  font-family: analogue;
-  font-weight: 100;
+  font-family: var(--poppins);
+  font-weight: normal;
 }
 
 /* story */
@@ -534,10 +542,11 @@ body {
 .event .card .box-date .title-event h3 {
   font-size: 3rem;
   color: var(--bg);
-  font-family: power;
+  font-family: power, sans-serif;
   text-shadow: 1px 1px 3px rgba(252, 255, 254, 0.2);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
   /* letter-spacing: 3px; */
 }
 
@@ -665,9 +674,11 @@ body {
 .event-2 .card .box-date .title-event-2 h3 {
   font-size: 3rem;
   color: var(--bg);
-  font-family: power;
+  font-family: power, sans-serif;
   text-shadow: 1px 1px 3px rgba(252, 255, 254, 0.2);
   text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
   letter-spacing: 3px;
 }
 
@@ -1198,7 +1209,7 @@ footer .credit h5 {
   }
   .about .row .content {
     text-align: left;
-    padding: 1.5rem 7%;
+    padding: 2rem 7%;
   }
   .about .row .content h3 {
     font-size: 2.8rem;

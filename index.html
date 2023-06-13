@@ -29,7 +29,7 @@
     <!-- popup start -->
     <div id="myPopup" class="popup">
       <div class="popup-content">
-        <h2 class="example1"></h2>
+        <h2 class="example1">The Wedding Of</h2>
         <h1>Utsman <span> &</span> Yani.</h1>
         <button class="close" style="opacity: 0; y: -100;"><i data-feather="mail" style="vertical-align: middle; "></i> Buka Undangan</button>
         <audio id="popupAudio" src="audio/utsmansong.mp3"></audio> <!-- Ganti dengan path file audio yang sesuai -->
@@ -99,7 +99,7 @@
           <h3 data-aos="fade-up" >Utsman</h3>
           <p data-aos="fade-up" data-aos-delay="500" >Putra Pertama Dari :</p>
           <span data-aos="fade-up" >Bapak Dindin dan Ibu Papat.</span>
-          <a href="https://instagram.com/utsman520?igshid=MzNlNGNkZWQ4Mg==" data-aos="fade-up" target="_blank" class="cba"><i data-feather="instagram" style="vertical-align: middle"></i> Instagram</a>
+          <a href="https://instagram.com/utsman520?igshid=MzNlNGNkZWQ4Mg==" data-aos="fade-up" target="_blank" class="cba"><i data-feather="instagram" style="vertical-align: middle"></i> INSTAGRAM</a>
         </div>
       </div>
     </section>
@@ -115,7 +115,7 @@
           <h3 data-aos="fade-up">Yani Mulyani</h3>
           <p data-aos="fade-up" data-aos-delay="500">Putri Kedua Dari :</p>
           <span data-aos="fade-up">Bapak Umar (Alm) dan Ibu Mastoah</span>
-          <a href="https://instagram.com/_yniivzyus?igshid=OGQ5ZDc2ODk2ZA==" data-aos="fade-up" target="_blank" class="cba"><i data-feather="instagram" style="vertical-align: middle"></i> Instagram</a>
+          <a href="https://instagram.com/_yniivzyus?igshid=OGQ5ZDc2ODk2ZA==" data-aos="fade-up" target="_blank" class="cba"><i data-feather="instagram" style="vertical-align: middle"></i> INSTAGRAM</a>
         </div>
       </div>
     </section>
@@ -246,7 +246,7 @@
               <img src="images/gallery/11.JPG" alt="" class="img">
             </a>
             <a href="images/gallery/12.JPG" data-lightbox="models" data-title="Caption1">
-              <img src="images/gallery/12.JPG" alt="" class="img">
+              <img src="images/event/event5.JPG" alt="" class="img">
             </a>
         
           </div>
@@ -361,12 +361,6 @@
     <!-- sweetalert -->
     <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
     <script>
-       gsap.registerPlugin(TextPlugin);
-       gsap.to('.example1', {
-            duration: 1,
-            delay: 1,
-            text: 'The Wedding of'
-        }); 
         gsap.from('.popup-content h1', {
             duration: 3,
             delay: 2.5,
@@ -380,11 +374,11 @@
             opacity: 100,
             ease: 'elastic'
         });
-        const gallery = document.querySelectorAll('.img-gallery');
+        const gallery = document.querySelectorAll('.img');
 
         gallery.forEach((img, i) => {
-            img.dataset.aos = 'zoom-out';
-            img.dataset.aosDelay = i * 300;
+            img.dataset.aos = 'zoom-in';
+            img.dataset.aosDelay = i * 100;
         });
         AOS.init({
           duration: 2500,
