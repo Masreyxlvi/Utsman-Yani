@@ -1150,7 +1150,7 @@ footer .credit h5 {
     display: flex;
     align-items: flex-end;
     align-content: flex-end;
-    padding: 15rem 3rem;
+    padding: 20rem 3rem;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -1161,9 +1161,9 @@ footer .credit h5 {
     align-items: center;
   }
 
-  .hero .content {
+  /* .hero .content {
     padding-top: 22rem;
-  }
+  } */
 
   /* Quran */
   .quran {
