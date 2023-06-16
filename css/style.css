@@ -1173,7 +1173,7 @@ footer .credit h5 {
     flex-wrap: wrap;
   }
   .quran .row .quran-img img {
-    height: 24rem;
+    width: 100%;
     object-fit: cover;
     object-position: center;
   }
