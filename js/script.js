@@ -10,10 +10,11 @@ var logo = document.getElementById("logo");
 // Fungsi untuk menampilkan popup
 function showPopup() {
   popup.style.display = "flex";
+  document.body.style.overflow = "hidden";
   setTimeout(function () {
     popup.style.transform = "translateY(0)";
     popup.style.opacity = 1;
-  }, 100); // Tambahkan penundaan agar animasi berfungsi dengan baik
+  }, 200); // Tambahkan penundaan agar animasi berfungsi dengan baik
 }
 
 // Fungsi untuk menyembunyikan popup
@@ -21,6 +22,7 @@ function hidePopup() {
   var popupAudio = document.getElementById("popupAudio");
   popupAudio.play(); // Menghentikan audio
   popup.style.transform = "translateY(-100%)";
+  document.body.style.overflow = "auto";
   popup.style.opacity = 0;
   setTimeout(function () {
     popup.style.display = "none";
