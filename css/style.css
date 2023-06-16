@@ -9,33 +9,6 @@
   font-style: normal;
   font-display: swap;
 }
-/* 
-@font-face {
-  font-family: analogue;
-  src: url("../fonts/MiConv.com__Analogue\ Thin.woff") format("woff");
-  font-weight: 100;
-} */
-/* @font-face {
-  font-family: analogue;
-  src: url("../fonts/MiConv.com__AnalogueRed-56Oblique.woff") format("woff");
-  font-weight: 500;
-} */
-/* @font-face {
-  font-family: analogue;
-  src: url("../fonts/MiConv.com__AnalogueRed-46LightOblique.woff") format("woff");
-  font-weight: 200;
-}
-@font-face {
-  font-family: analogue;
-  src: url("../fonts/MiConv.com__AnalogueRed-76BoldOblique.woff") format("woff");
-  font-weight: 600;
-}
-@font-face {
-  font-family: analogue;
-  src: url("../fonts/MiConv.com__AnalogueRed-75Bold.woff") format("woff");
-  font-weight: 700;
-}
- */
 @font-face {
   font-family: power;
   src: url("../fonts/power.woff2") format("woff2");
@@ -71,7 +44,6 @@
 body {
   font-family: var(--poppins);
   background: var(--bg);
-  /* height: 1000px; */
 }
 
 /* Gaya untuk popup */
@@ -94,14 +66,20 @@ body {
 }
 
 /* Gaya untuk konten popup */
-.popup-content {
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 7rem;
   margin: 5rem auto;
+}
+.popup-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
 }
 
 .popup-content .example1 {
@@ -110,17 +88,17 @@ body {
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 .popup-content h1 {
-  font-size: 4em;
+  font-size: 5em;
   font-weight: 700;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
   font-family: analogue, Sans-Serif;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   letter-spacing: 1px;
 }
 .popup-content h1 span {
@@ -148,7 +126,7 @@ body {
   /* top: 15%; */
   transform: translateX(-50%);
   z-index: 999;
-  animation: logoAnimation 4s infinite;
+  animation: logoAnimation 7s infinite;
 }
 
 #logo img {
@@ -173,8 +151,10 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  align-content: flex-end;
   position: relative;
+  overflow: hidden;
 }
 
 .slider {
@@ -228,10 +208,13 @@ body {
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
   text-transform: uppercase;
-  margin: 2rem 0;
-  font-style: italic;
+  margin: 1.5rem 0;
   font-weight: normal;
   letter-spacing: 1px;
+}
+.hero .content h4 span {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .hero .content h1 {
@@ -248,14 +231,15 @@ body {
 }
 
 .hero .content a {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--bg);
   text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.8);
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1.5rem;
+  letter-spacing: 3px;
 }
 .hero .content a span {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .hero .content .countdown {
@@ -298,13 +282,15 @@ body {
   padding: 5rem 2rem;
 }
 .quran .row .content h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: var(--dark-75);
-  font-family: analogue;
+  color: var(--gray-100);
+  font-weight: 700;
+  font-style: italic;
+  font-family: power, sans-serif;
 }
 .quran .row .content p {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   margin-bottom: 0.8rem;
   color: var(--gray-50);
   font-family: "Poppins", Sans-serif;
@@ -338,7 +324,7 @@ body {
   color: var(--dark-75);
 }
 .about .row .content h3 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-family: analogue, sans-serif;
   font-weight: normal;
@@ -373,7 +359,7 @@ body {
 /* about2 */
 .about2 {
   padding: 7rem 7% 1.4rem;
-  background-image: linear-gradient(to top, rgba(93, 100, 111, 0.3), rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(to top, rgba(93, 100, 111, 0.3), rgba(255, 255, 255, 0.5));
 }
 
 .about2 .row {
@@ -399,7 +385,7 @@ body {
   color: var(--dark-75);
 }
 .about2 .row .content h3 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-family: analogue, sans-serif;
   font-weight: normal;
@@ -806,7 +792,7 @@ body {
 /* Gift */
 .gift {
   padding: 7rem 7%;
-  background-color: var(--gray-25);
+  background-image: linear-gradient(to top, rgba(93, 100, 111, 0.3), rgba(255, 255, 255, 0.3));
 }
 
 .gift h2 {
@@ -1159,8 +1145,20 @@ footer .credit h5 {
     font-size: 65%;
   }
 
+  .popup-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    padding: 10rem 3rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
   .popup-content {
-    padding-top: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero .content {
@@ -1169,7 +1167,7 @@ footer .credit h5 {
 
   /* Quran */
   .quran {
-    padding: 7rem 1rem;
+    padding: 3rem 1rem;
   }
   .quran .row {
     flex-wrap: wrap;
@@ -1182,19 +1180,15 @@ footer .credit h5 {
   .quran .row .content {
     text-align: center;
     padding: 0;
-  }
-  .quran .row .content h3 {
-    font-size: 2.8rem;
-    margin-top: 0.7rem;
+    margin-top: 2rem;
   }
   .quran .row .content p {
-    font-size: 2rem;
-    margin-top: 0.7rem;
+    padding: 1rem 2rem;
   }
 
   /* about */
   .about {
-    padding: 7rem 0;
+    padding: 4rem 0;
   }
   .about .row {
     flex-wrap: wrap;
@@ -1209,7 +1203,7 @@ footer .credit h5 {
   }
   .about .row .content {
     text-align: left;
-    padding: 2rem 7%;
+    padding: 4rem 7%;
   }
   .about .row .content h3 {
     font-size: 2.8rem;

@@ -1,3 +1,6 @@
+$(document).ready(function () {
+  $(".example1").arctext({ radius: 200 });
+});
 // Ambil elemen-elemen yang dibutuhkan
 var popup = document.getElementById("myPopup");
 var closeBtn = document.getElementsByClassName("close")[0];
@@ -23,7 +26,7 @@ function hidePopup() {
     popup.style.display = "none";
     popup.style.opacity = 1;
     popup.style.transform = "translateY(0)"; // Reset transformasi saat popup disembunyikan
-  }, 3000); // Waktu yang sesuai dengan durasi transisi
+  }, 5000); // Waktu yang sesuai dengan durasi transisi
 }
 
 function pause() {
@@ -42,10 +45,6 @@ closeBtn.addEventListener("click", hidePopup);
 logo.addEventListener("click", pause);
 // Tampilkan popup setelah halaman dimuat
 window.onload = showPopup;
-
-$(document).ready(function () {
-  $(".example1").arctext({ radius: 200 });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   // Ambil elemen slide dan atur slide pertama sebagai aktif
