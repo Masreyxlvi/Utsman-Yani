@@ -62,7 +62,7 @@ body {
   background-size: cover;
   background-position: center; /* Latar belakang transparan */
   min-height: 100vh;
-  transition: transform 2s ease, opacity 2s ease;
+  transition: transform 4s ease, opacity 4s ease;
 }
 
 /* Gaya untuk konten popup */
@@ -185,7 +185,7 @@ body {
   object-position: center;
   aspect-ratio: 3/2;
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
 }
 
 .slide.active {
@@ -953,7 +953,6 @@ body {
 .rsvp .row .message form .input-group select {
   width: 100%;
   font-size: 1.6rem;
-  font-family: analogue;
   background: none;
   vertical-align: top;
 }
