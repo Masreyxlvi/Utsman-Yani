@@ -48,10 +48,4 @@ $(function () {
     });
     $(".card-message").html(showData(dataMessage));
   });
-  function resetData() {
-    localStorage.removeItem("dataMessage");
-  }
-
-  // Call this function whenever you want to reset or delete all data
-  resetData();
 });
