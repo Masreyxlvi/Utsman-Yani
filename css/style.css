@@ -4,15 +4,17 @@
 /* My FONTS */
 @font-face {
   font-family: analogue;
-  src: url("../fonts/Analogue.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/Analogue.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: power;
-  src: url("../fonts/power.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/power.woff2") format("woff2");
+  font-display: swap;
 }
 /* Start Custom Fonts CSS */
 
@@ -602,7 +604,7 @@ body {
 
 /* event 2 */
 .event-2 {
-  padding: 7rem 7% 1.4rem;
+  padding: 7rem 7%;
   overflow: hidden;
 }
 

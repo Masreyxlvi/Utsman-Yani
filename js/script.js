@@ -14,7 +14,7 @@ function showPopup() {
   setTimeout(function () {
     popup.style.transform = "translateY(0)";
     popup.style.opacity = 1;
-  }, 50); // Tambahkan penundaan agar animasi berfungsi dengan baik
+  }); // Tambahkan penundaan agar animasi berfungsi dengan baik
 }
 
 // Fungsi untuk menyembunyikan popup
