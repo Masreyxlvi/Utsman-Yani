@@ -942,7 +942,7 @@ body {
   flex: 1 1 45rem;
   padding: 4rem 2rem;
   text-align: center;
-  font-family: analogue;
+  /* font-family: analogue; */
   background-color: var(--bg);
 }
 .rsvp .row .message form .input-group {
